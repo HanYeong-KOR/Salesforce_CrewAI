@@ -1,0 +1,23 @@
+[project]
+name = "salesforce_analytics"
+version = "0.1.0"
+description = "Salesforce_Analytics using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.141.0,<1.0.0"
+]
+
+[project.scripts]
+salesforce_analytics = "salesforce_analytics.main:run"
+run_crew = "salesforce_analytics.main:run"
+train = "salesforce_analytics.main:train"
+replay = "salesforce_analytics.main:replay"
+test = "salesforce_analytics.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

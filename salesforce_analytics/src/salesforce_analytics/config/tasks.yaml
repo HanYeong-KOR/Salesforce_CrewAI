@@ -1,0 +1,45 @@
+data_extract_task:
+  description: >
+    Connect to Salesforce and query Account, Lead, Opportunity, and User. Use SOQL to extract data from the last year. Utilize environment variables. Store as pandas DataFrame.
+    Example SOQL: SELECT Id, Name, Email, Status FROM Lead WHERE CreatedDate > LAST_YEAR
+  expected_output: >
+    Data summary (head(10), shape), category counts.
+  agent: salesforce_connector
+  output_file: outputs/salesforce_connector/extracted_data_{current_year}.csv
+
+data_analysis_task:
+  description: >
+    Load the CSV file from outputs/salesforce_connector/extracted_data_{current_year}.csv using pandas. Clean the data with pandas (handle missing values, convert dates). Do NOT re-query Salesforce; analyze only the loaded CSV data.
+    Use GPT-4.1-mini-2025-04-14 AI to perform clustering, categorization (sales/marketing/service), and trend analysis for {current_year}. Let the AI handle keyword extraction and stats computation intelligently via natural language prompts, without manual coding. Focus on {current_year} trends, such as quarterly growth in the current year.
+  expected_output: >
+    Categorized lists (5 samples/category), 10 bullet points of AI-generated stats for {current_year}, clustering summary.
+  agent: data_analyzer
+  output_file: outputs/data_analyzer/analysis_results_{current_year}.json
+
+summary_generation_task:
+  description: >
+    Load the analysis JSON from outputs/data_analyzer/analysis_results_{current_year}.json.
+    Use GPT-4.1-mini-2025-04-14 AI to summarize data by category, generating natural language insights for {current_year} trends. Focus on business decisions; AI handles entity recognition and content creation fully, labeling all insights as {current_year} data.
+  expected_output: >
+    AI-generated bullet points (10 total) for {current_year}, one paragraph summarizing {current_year} insights.
+  agent: summary_generator
+  output_file: outputs/summary_generator/summary_{current_year}.md
+
+translation_task:
+  description: >
+    Load the English summary from outputs/summary_generator/summary_{current_year}.md.
+    Use GPT-4.1-mini-2025-04-14 AI to translate English summaries to Korean. Provide prompts to the AI for accurate, business-term preserving translation (e.g., 'lead' as '리드').
+  expected_output: >
+    Translated bullet points (10 in Korean) for {current_year}, one Korean paragraph.
+  agent: translator
+  output_file: outputs/translator/translated_summary_{current_year}.md
+
+report_creation_task:
+  description: >
+    Load the translated summary from outputs/translator/translated_summary_{current_year}.md and the original CSV from outputs/salesforce_connector/extracted_data_{current_year}.csv for graphs.
+    Take AI-translated summaries and generate PDF with reportlab. Embed graphs from data (e.g., using matplotlib on loaded CSV); use GPT-4.1-mini-2025-04-14 for any additional content refinement if needed. Label the report as '{current_year} Salesforce Summary'.
+    Output file: salesforce_{current_year}_summary_report.pdf
+  expected_output: >
+    PDF path, Korean summary for {current_year}, success message, Salesforce upload ID.
+  agent: report_creator
+  output_file: outputs/report_creator/salesforce_{current_year}_summary_report.pdf

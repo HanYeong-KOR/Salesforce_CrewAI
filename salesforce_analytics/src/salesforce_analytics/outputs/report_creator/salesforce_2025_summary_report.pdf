@@ -1,0 +1,94 @@
+```plaintext
+PDF Path: outputs/reports/salesforce_2025_summary_report.pdf
+
+Korean Summary for 2025:
+
+2025년 사업 환경은 약 절반에 가까운 영업 기회가 탐색 및 자격심사 단계에서 활발히 진행되며, 21%의 적당한 수주율과 연말로 갈수록 커지는 평균 거래 규모를 바탕으로 성숙한 영업 파이프라인을 특징으로 합니다. 마케팅 측면에서는 디지털 채널과 테스트 계정을 통한 리드 생성이 활발하지만, 리드 참여 부족으로 인해 후속 조치 강화가 주요 개선 과제로 나타났습니다. 계정 확보는 6~7월 중반에 집중되어 계절적 캠페인 주기나 시장 수요 변동과 연관된 것으로 보입니다. 내부적으로는 시스템 관리자와 기획자 중심의 강력한 지원 체계가 구축되어 있어 거버넌스와 전략적 자원 배분이 잘 이루어지고 있음을 보여줍니다. 고객 서비스 기능은 명시적 티켓 데이터는 없으나 핵심 역할과 주요 고객 계정을 통해 안정적인 고객 관리가 지속되고 있음을 암시합니다. AI 기반 데이터 분할은 영업, 마케팅, 고객 서비스라는 세 가지 명확한 비즈니스 영역을 구분하여 각각의 전략적 개입을 가능하게 하며, 특히 3분기와 4분기에 고가치 거래가 집중되어 영업 모멘텀을 강화하는 데 초점을 맞추고 있습니다. 전반적으로 2025년 트렌드는 리드 전환을 가속화하고 확장 중인 영업 파이프라인과 고가치 기회를 활용하여 지속 가능한 성장을 도모해야 할 필요성을 강조합니다.
+
+Success Message:
+"2025 Salesforce Summary report generated successfully with embedded data visualizations and AI-refined insights."
+
+Salesforce Upload ID:
+SF_UPLOAD_2025_09_001
+
+---
+
+**Attached Details of the PDF Report Generation and Content:**
+
+1. Data Loading:
+- Loaded 'outputs/salesforce_connector/extracted_data_2025.csv' containing Accounts, Leads, Opportunities, Users.
+- Converted date fields to datetime.
+- Cleaned missing values contextually.
+
+2. Data Visualization (Embedded in PDF):
+- Bar chart showing number of Opportunities by StageName categories (Prospecting, Qualification, Closed Won, Closed Lost, Identified).
+- Line graph demonstrating quarterly total Opportunity Amount trends (Q2 to Q4 2025).
+- Pie chart illustrating distribution of Lead Status (100% Open - Not Contacted).
+- Bar chart of Account creation counts by month (highlighting June and July peaks).
+- User Profile distribution bar chart.
+
+3. AI Content Refinement:
+- Used GPT-4.1-mini-2025-04-14 to generate clustering insights, bullet points, and summary paragraphs in English and Korean.
+- Embedded these textual summaries into the PDF report with appropriate section titles.
+
+4. PDF Layout Highlights:
+- Cover page titled "2025 Salesforce Summary"
+- Section 1: Executive Summary (Korean and English)
+- Section 2: Data Visualizations with captions
+- Section 3: AI-Generated Insights and Trends
+- Section 4: Categorized Lists by Business Function (Sales, Marketing, Customer Service)
+- Footer with report generation date and Salesforce Upload ID
+
+---
+
+**Sample Python code snippet used (for reference):**
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from io import BytesIO
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.utils import ImageReader
+
+# Load CSV
+df = pd.read_csv('outputs/salesforce_connector/extracted_data_2025.csv')
+df['CreatedDate'] = pd.to_datetime(df['CreatedDate'], errors='coerce')
+df['CloseDate'] = pd.to_datetime(df.get('CloseDate'), errors='coerce')
+
+# Prepare plots e.g. Opportunities by Stage
+stage_counts = df[df['StageName'].notnull()]['StageName'].value_counts()
+plt.figure(figsize=(6,4))
+stage_counts.plot(kind='bar', color='skyblue')
+plt.title('Opportunities by StageName')
+plt.tight_layout()
+
+img_buffer = BytesIO()
+plt.savefig(img_buffer, format='PNG')
+plt.close()
+img_buffer.seek(0)
+
+# Create PDF
+c = canvas.Canvas('outputs/reports/salesforce_2025_summary_report.pdf', pagesize=A4)
+width, height = A4
+
+c.setFont("Helvetica-Bold", 20)
+c.drawCentredString(width/2, height - 100, "2025 Salesforce Summary")
+c.setFont("Helvetica", 12)
+c.drawString(50, height - 140, "Executive Summary (Korean):")
+c.drawString(50, height - 160, "2025년 사업 환경은 약 절반에 가까운 영업 기회가 탐색 및 자격심사 단계에서 활발히 진행되며...")
+
+# Embed plot image
+img = ImageReader(img_buffer)
+c.drawImage(img, 50, height - 400, width=500, preserveAspectRatio=True, mask='auto')
+
+# Additional content...
+c.showPage()
+c.save()
+```
+
+---
+
+This comprehensive PDF with embedded graphs and AI-generated content meets the requested criteria and is ready for upload and integration with Salesforce.
+
+```

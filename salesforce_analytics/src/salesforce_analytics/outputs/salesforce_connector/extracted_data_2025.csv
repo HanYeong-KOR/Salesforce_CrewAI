@@ -1,0 +1,81 @@
+Account Data:
+head(10):
+   Id                      Name              CreatedDate
+0  001Ig00000GCvxwIAD       테스트1        2025-06-17T04:04:36.000+0000
+1  001Ig00000GCvuzIAD       테스트2        2025-06-17T04:14:11.000+0000
+2  001Ig00000GBmWmIAL      250610_전환 테스트  2025-06-10T13:38:26.000+0000
+3  001Ig00000GCwtfIAD      삼성전자          2025-06-17T05:46:35.000+0000
+4  001Ig00000GBo86IAD      250610_전환 테스트2 2025-06-10T16:06:08.000+0000
+5  001Ig00000GDuKiIAL      nadp            2025-06-23T00:22:33.000+0000
+6  001Ig00000GDuKjIAL      Jdoe            2025-06-23T00:22:34.000+0000
+7  001Ig00000GDuKkIAL      bsom            2025-06-23T00:22:34.000+0000
+8  001Ig00000GXcmGIAT      Test Account 1  2025-07-09T02:11:43.000+0000
+9  001Ig00000GXcmHIAT      Test Account 2  2025-07-09T02:11:43.000+0000
+Shape: (30, 3)
+Category counts for 'Name': 
+Test Account 1     1
+Test Account 2     1
+Test Account 3     1
+Test Account 4     1
+Test Account 5     1
+Test Account 6     1
+Test Account 7     1
+Test Account 8     1
+Test Account 9     1
+Test Account 10    1
+... (others each 1)
+
+Lead Data:
+head(10):
+   Id                  Name            Email                Status              CreatedDate
+0  00QIg000004qaYDMAY  리드테스트1          None                Open - Not Contacted 2025-06-29T14:53:38.000+0000
+1  00QIg000004qLDRMA2  테스트             aa@aa.aa             Open - Not Contacted 2025-05-20T23:58:42.000+0000
+2  00QIg000004qUq0MAE  WebToLead          WebToLead@web.com    Open - Not Contacted 2025-06-17T07:57:31.000+0000
+Shape: (3, 5)
+Category counts for 'Status':
+Open - Not Contacted    3
+
+Opportunity Data:
+head(10):
+   Id                  Name                 StageName      Amount        CloseDate     CreatedDate
+0  006Ig00000509tQIAQ  테스트oppty            Identified     None          2025-06-25    2025-06-17T04:05:24.000+0000
+1  006Ig000005034OIAQ  opptytest               Prospecting   None          2025-06-18    2025-06-11T04:57:15.000+0000
+2  006Ig0000050CDkIAM  aaaasd_20250618         Identified     None          2025-06-26    2025-06-18T05:40:09.000+0000
+3  006Ig0000050HG5IAM  TEST321_20250623        Identified     None          2025-06-30    2025-06-23T01:34:52.000+0000
+4  006Ig0000050buKIAQ  Test Opportunity 1      Qualification  500000.0      2025-08-10    2025-07-09T02:11:44.000+0000
+5  006Ig0000050buLIAQ  Test Opportunity 2      Closed Won     1000000.0     2025-09-11    2025-07-09T02:11:44.000+0000
+6  006Ig0000050buMIAQ  Test Opportunity 3      Closed Lost   1500000.0     2025-10-12    2025-07-09T02:11:44.000+0000
+7  006Ig0000050bvMIAQ  Test Opportunity 5      Qualification  2500000.0     2025-12-14    2025-07-09T02:11:44.000+0000
+8  006Ig0000050bvNIAQ  Test Opportunity 6      Closed Won    3000000.0     2026-01-15    2025-07-09T02:11:44.000+0000
+9  006Ig0000050bvOIAQ  Test Opportunity 7      Closed Lost   3500000.0     2026-02-16    2025-07-09T02:11:44.000+0000
+Shape: (34, 6)
+Category counts for 'StageName':
+Prospecting     8
+Qualification   8
+Closed Won      7
+Closed Lost     7
+Identified      4
+
+User Data:
+head(10):
+   Id                  Username                            Email                         Profile.Name                 CreatedDate
+0  0052w00000E9JnAAAV  autoproc@00d2w00000qtv3meav         autoproc@00d2w00000qtv3meav  None                         2023-02-09T06:07:25.000+0000
+1  0052w00000E9JnDAAV  automatedclean@00d2w00000qtv3meav   automatedclean@00d2w00000qtv3meav None                         2023-02-09T06:07:25.000+0000
+2  0052w00000DrkB4AAJ  gdnjs2@naver.com.develop            gdnjs2@naver.com                System Administrator          2023-02-09T07:25:40.000+0000
+3  0052w00000DsJR9AAN  manager1@sobetec.com.manager1        hanyeong.choi@sobetec.com       Manager                      2023-02-14T05:35:50.000+0000
+4  0052w00000DriP5AAJ  hanyeong.choi@sbt.com.develop        hanyeong.choi@sobetec.com       System Administrator          2023-02-09T06:07:25.000+0000
+5  0052w00000E9Jn9AAF  integration@00d2w00000qtv3meav.com  noreply@example.com             Analytics Cloud Integration User 2023-02-09T06:07:25.000+0000
+6  0052w00000E9JnFAAV  insightssecurity@00d2w00000qtv3meav.com noreply@example.com          Analytics Cloud Security User  2023-02-09T06:07:25.000+0000
+7  0052w00000DsJaNAAV  buyer1@sobetec.com.buyer1            hanyeong.choi@sobetec.com       Buyer                        2023-02-14T06:00:33.000+0000
+8  0052w00000DsJQuAAN  hanyeong.choi@sobetec.com.planner1   hanyeong.choi@sobetec.com       Planner                      2023-02-14T05:33:01.000+0000
+9  0052w00000DsJR4AAN  hanyeong.choi@sobetec.com.planner2   hanyeong.choi@sobetec.com       Planner                      2023-02-14T05:33:55.000+0000
+Shape: (12, 5)
+Category counts for 'Profile.Name':
+System Administrator             2
+Manager                         1
+Analytics Cloud Integration User 1
+Analytics Cloud Security User    1
+Buyer                          1
+Planner                        2
+Chatter Free User              1
+None                          3

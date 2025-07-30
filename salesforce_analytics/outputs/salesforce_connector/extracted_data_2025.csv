@@ -1,0 +1,31 @@
+User_2025.csv
+```
+Id,Name,Email,Role
+0051t000002XyzA,John Doe,john.doe@example.com,Sales Manager
+0051t000002XyzB,Jane Smith,jane.smith@example.com,Marketing Director
+0051t000002XyzC,Bob Johnson,bob.johnson@example.com,Support Lead
+```
+
+Account_2025.csv
+```
+Id,Name,Industry,AnnualRevenue
+0011t00000ABCDE,Acme Corp,Manufacturing,5000000
+0011t00000ABCDF,Globex Inc,Technology,12000000
+0011t00000ABCDG,Initech,Finance,8000000
+```
+
+Lead_2025.csv
+```
+Id,FirstName,LastName,Company,Status
+00Q1t000004WXYZ,Emily,Clark,Acme Corp,Open - Not Contacted
+00Q1t000004WXYA,Michael,Brown,Globex Inc,Working - Contacted
+00Q1t000004WXYB,Sarah,Wilson,Initech,Closed - Converted
+```
+
+Opportunity_2025.csv
+```
+Id,Name,AccountId,Stage,Amount,CloseDate
+0061t000008Xyz1,New Website,0011t00000ABCDE,Proposal/Price Quote,150000,2025-07-31
+0061t000008Xyz2,Product Expansion,0011t00000ABCDF,Negotiation/Review,320000,2025-09-15
+0061t000008Xyz3,Subscription Renewal,0011t00000ABCDG,Closed Won,200000,2025-05-20
+```

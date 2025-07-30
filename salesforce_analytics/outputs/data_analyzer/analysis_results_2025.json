@@ -1,0 +1,70 @@
+```json
+{
+  "KPIs": {
+    "Users": {
+      "TotalActiveUsers": 2
+    },
+    "Accounts": {
+      "TotalAccounts": 2,
+      "TotalAnnualRevenue": 17000000,
+      "AverageAnnualRevenue": 8500000,
+      "AccountsByIndustry": {
+        "Manufacturing": 1,
+        "Technology": 1
+      }
+    },
+    "Leads": {
+      "TotalLeads": 2,
+      "LeadsByStatus": {
+        "Open - Not Contacted": 1,
+        "Working - Contacted": 1
+      },
+      "LeadsCreatedByOwner": {
+        "0051t000000XyzA": 1,
+        "0051t000000XyzB": 1
+      }
+    },
+    "Opportunities": {
+      "TotalOpportunities": 2,
+      "OpportunitiesByStage": {
+        "Proposal": 1,
+        "Negotiation": 1
+      },
+      "TotalOpportunityAmount": 2250000,
+      "AverageOpportunityAmount": 1125000,
+      "OpportunitiesByOwner": {
+        "0051t000000XyzA": 1,
+        "0051t000000XyzB": 1
+      }
+    }
+  },
+  "Trends": {
+    "LeadCreationDates": {
+      "EarliestLeadCreated": "2025-03-15T10:00:00Z",
+      "LatestLeadCreated": "2025-05-22T15:30:00Z",
+      "LeadCreationTrend": "Leads created in the first half of 2025, indicating steady prospecting activity."
+    },
+    "OpportunityCloseDates": {
+      "EarliestCloseDate": "2025-09-30",
+      "LatestCloseDate": "2025-12-15",
+      "OpportunityClosingTrend": "Opportunities are targeted to close in Q3 and Q4 2025, with increasing deal sizes."
+    },
+    "RevenueByAccountOwner": {
+      "0051t000000XyzA": 5000000,
+      "0051t000000XyzB": 12000000,
+      "TrendInsight": "Owner with Id 0051t000000XyzB manages accounts with higher total revenue."
+    }
+  },
+  "Anomalies": {
+    "LeadStatusDistribution": {
+      "Observation": "Each lead owner has exactly one lead, but statuses differ, indicating possible differences in lead engagement strategy."
+    },
+    "UserActivity": {
+      "Observation": "Both users are active, so no anomalies regarding user activity status."
+    },
+    "OpportunityAmounts": {
+      "Observation": "Opportunity amounts differ significantly; one deal is twice the size of the other, which may require attention to pipeline balance."
+    }
+  }
+}
+```

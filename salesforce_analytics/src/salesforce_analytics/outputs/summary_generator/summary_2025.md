@@ -1,0 +1,16 @@
+**2025 Data Insights by Category – AI-Generated Bullet Points**
+
+1. Sales Opportunities show a strong pipeline with 47% of deals in Prospecting and Qualification stages, indicating robust mid-funnel activity in 2025.  
+2. Closed Won deals represent 21% of total Opportunities, reflecting a moderate but steady conversion rate in the sales cycle.  
+3. Deal sizes in sales are increasing towards the latter half of 2025, with some closed deals exceeding 3 million USD, highlighting a trend towards larger contracts.  
+4. Marketing leads remain largely unengaged, with 100% of Leads in the “Open - Not Contacted” status, signaling a critical need to enhance lead follow-up and outreach strategies.  
+5. Account creation peaks mid-year (June-July), suggesting seasonality in customer onboarding or campaign launches in 2025.  
+6. The presence of generic “Test Account” names in marketing data implies ongoing experimental or pilot campaigns, with actual lead conversions still pending.  
+7. User role distribution emphasizes internal operational strength, with System Administrators and Planners dominating, ensuring strong governance and planning capabilities.  
+8. Customer Service insights are indirect but identifiable through roles like Buyers and Planners and key accounts such as 삼성전자 (Samsung Electronics), implying stable customer relationship management though explicit service tickets are absent.  
+9. AI-driven clustering distinctly segments data into Sales (high-value opportunities), Marketing (lead generation focus), and Customer Service (user roles/account management), facilitating focused business strategies.  
+10. Quarterly revenue trends reveal a steady increase in Opportunity amounts from Q2 through Q4 2025, with Q4 poised for the highest closures, indicating a positive year-end sales momentum.  
+
+**Summary Paragraph of 2025 Insights**  
+
+In 2025, the business landscape is characterized by a maturing sales pipeline with nearly half of opportunities actively progressing through prospecting and qualification stages, and a moderate win rate of 21%, supported by an increasing average deal size toward year-end. Marketing efforts, while active in lead generation via digital channels and test accounts, suffer from a lack of lead engagement, presenting a key area for improvement. Account acquisition shows seasonal patterns, peaking mid-year, which could align with campaign cycles or market demand fluctuations. Internally, strong support is provided by System Administrators and Planners, underscoring the importance of governance and strategic resource allocation. Customer service functions, though not directly measured by ticketing data, are inferred through key roles and notable accounts like 삼성전자, ensuring ongoing client management. The AI-driven segmentation into Sales, Marketing, and Customer Service clusters offers clear direction for targeted interventions—accelerating lead conversion, sustaining sales momentum especially in Q3 and Q4, and maintaining robust customer relations. Overall, 2025 trends indicate a critical need to convert leads more effectively while capitalizing on the expanding sales pipeline and high-value opportunities for sustained growth.
